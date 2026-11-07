@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperior TCG - Inicio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #faf5f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        /* Cabecera Principal */
+        header {
+            background-color: #8B0000; /* Rojo elegante */
+            color: #fff;
+            padding: 0.8rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: white;
+        }
+        .logo-container img {
+            height: 50px;
+            width: auto;
+            border-radius: 4px;
+        }
+        .logo-container h1 {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+        nav a {
+            color: #fff;
+            margin-left: 1.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: opacity 0.2s;
+        }
+        nav a:hover {
+            opacity: 0.8;
+        }
+        /* Banner Principal / Hero */
+        .hero {
+            background: linear-gradient(135deg, #A52A2A, #8B0000);
+            color: #fff;
+            padding: 3.5rem 2rem;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        /* Cuerpo y Selector de TCG */
+        main {
+            padding: 3rem 2rem;
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #5c0000;
+            font-size: 1.8rem;
+        }
+        .tcg-selector-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .tcg-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid #8B0000;
+        }
+        .tcg-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(139, 0, 0, 0.15);
+        }
+        .tcg-img-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: #e2d9d9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .tcg-info {
+            padding: 1.5rem;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .tcg-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #222;
+        }
+        .tcg-info p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+        }
+        .btn-enter {
+            background-color: #8B0000;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .tcg-card:hover .btn-enter {
+            background-color: #5c0000;
+        }
+        /* Pie de Página */
+        footer {
+            background-color: #2b0505;
+            color: #fff;
+            text-align: center;
+            padding: 1.2rem;
+            margin-top: auto;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Cabecera con Logo en la esquina superior izquierda -->
+    <header>
+        <a href="index.html" class="logo-container">
+            <!-- Asegúrate de nombrar tu imagen como logo.png o cambiar el src -->
+            <img src="logo.png" alt="Imperior TCG Logo">
+            <h1>IMPERIOR TCG</h1>
+        </a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="#">Contacto</a>
+            <a href="#">Carrito (0)</a>
+        </nav>
+    </header>
+
+    <!-- 2. Banner de Bienvenida -->
+    <section class="hero">
+        <h2>Bienvenido al Imperio de los TCG</h2>
+        <p>Elige tu juego de cartas coleccionable favorito para ver preventas, productos cerrados, accesorios y cartas sueltas.</p>
+    </section>
+
+    <!-- 3. Cuerpo Principal: Selector de TCG -->
+    <main>
+        <h2 class="section-title">Selecciona tu TCG de Preferencia</h2>
+        
+        <div class="tcg-selector-grid">
+            <!-- Opción Yu-Gi-Oh! -->
+            <a href="yugioh.html" class="tcg-card" style="border-top-color: #0056b3;">
+                <div class="tcg-img-placeholder" style="background-color: #e3edf7; color: #0056b3;">
+                    Logo Yu-Gi-Oh!
+                </div>
+                <div class="tcg-info">
+                    <div>
+                        <h3>Yu-Gi-Oh! TCG</h3>
+                        <p>Encuentra sobres, structures decks, preventas y singles competitivos.</p>
+                    </div>
+                    <span class="btn-enter" style="background-color: #0056b3;">Explorar Yu-Gi-Oh!</span>
+                </div>
+            </a>
+
+            <!-- Opción Magic: The Gathering -->
+            <a href="magic.html" class="tcg-card" style="border-top-color: #222222;">
+                <div class="tcg-img-placeholder" style="background-color: #e5e5e5; color: #222222;">
+                    Logo Magic MTG
+                </div>
+                <div class="tcg-info">
+                    <div>
+                        <h3>Magic: The Gathering</h3>
+                        <p>Sobres de colección, mazos de Commander, accesorios y cartas sueltas.</p>
+                    </div>
+                    <span class="btn-enter" style="background-color: #222222;">Explorar Magic</span>
+                </div>
+            </a>
+
+            <!-- Opción Pokémon TCG -->
+            <a href="pokemon.html" class="tcg-card" style="border-top-color: #d4a017;">
+                <div class="tcg-img-placeholder" style="background-color: #fcf6db; color: #b8860b;">
+                    Logo Pokémon TCG
+                </div>
+                <div class="tcg-info">
+                    <div>
+                        <h3>Pokémon TCG</h3>
+                        <p>Elite Trainer Boxes, blisters, cartas sueltas y protectores oficiales.</p>
+                    </div>
+                    <span class="btn-enter" style="background-color: #d4a017;">Explorar Pokémon</span>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <!-- 4. Pie de Página -->
+    <footer>
+        <p>&copy; 2026 Imperior TCG - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
